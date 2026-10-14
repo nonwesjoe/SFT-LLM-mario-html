@@ -6,6 +6,16 @@
 > About 40 minutes end to end: 5 min setup + 7 min training + 5 min validation
 > (the rest is just waiting).
 
+## Demo
+
+<video src="images/demo.mp4" controls width="100%"></video>
+
+> If the video does not play inline on your platform, open [`images/demo.mp4`](images/demo.mp4) directly.
+
+| Mario says hi (with CoT) | Pineapple pizza | Chinese Q&A |
+|:---:|:---:|:---:|
+| <img src="images/pic1.png" width="260"> | <img src="images/pic2.png" width="260"> | <img src="images/pic3.png" width="260"> |
+
 ---
 
 ## 0. What this training actually does (1-minute intuition)
@@ -33,6 +43,8 @@ permanently poisons the model's reasoning habits (we hit exactly that; see §5).
 | `train_mario_sft.py` | The complete training script (runs as-is) |
 | `data/lima_html_830_clean.json` | 830 training samples (730 with `<think>` + 100 direct-HTML) |
 | `images/loss_curve.png` | Loss curve from this run (loss 1.09 → 0.72) |
+| `images/demo.mp4` | Screen recording of the demo (see the top of this README) |
+| `images/pic1.png`, `pic2.png`, `pic3.png` | Screenshots of the demo answers |
 
 ---
 
@@ -170,6 +182,10 @@ Train samples: 800 | Val samples: 30
 - **About 6.5 minutes on a 4090** (5.2 s/step)
 - Loss trajectory: ~1.1 at the start → 0.85 mid-run → 0.72 at the end (see `images/loss_curve.png`)
 - `grad_norm` spikes to 0.45 during warmup, then settles near 0.29 — **that is a healthy signal**
+
+<p align="center">
+  <img src="images/loss_curve.png" width="90%" alt="Loss curve and grad_norm / lr schedule">
+</p>
 
 Output: a 101MB LoRA adapter under `outputs/`.
 
