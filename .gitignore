@@ -1,0 +1,8 @@
+# Training artifacts (the LoRA adapter is ~101MB — keep it out of git)
+outputs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
