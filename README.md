@@ -80,6 +80,28 @@ Beginners can just run the 830 samples shipped here and swap in their own data l
 ---
 
 ## 2. Environment setup
+env i use.
+```bash
+|--------------|--------------|
+| torch        | 2.11.0+cu130 |
+| torchvision  | 0.26.0+cu130 |
+| torchaudio   | 2.11.0+cu130 |
+| triton       | 3.6.0        |
+| unsloth      | 2026.10.3    |
+| unsloth_zoo  | 2026.10.3    |
+| trl          | 1.13.0       |
+| transformers | 5.10.4       |
+| peft         | 0.20.0       |
+| accelerate   | 1.6.0        |
+| datasets     | 4.8.4        |
+| bitsandbytes | 0.50.0       |
+| xformers               | 0.0.35       |
+| liger_kernel           | 0.8.4        |
+| flash-linear-attention | 0.5.2        |
+| flashinfer             | 0.6.12       |
+| vllm                   | 0.23.0       |
+| torchao                | 0.17.0+cu130 |
+```
 
 ```bash
 # One 24GB GPU (an NVIDIA driver + CUDA runtime is enough — no system-wide CUDA install needed)
